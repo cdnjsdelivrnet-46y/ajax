@@ -16,7 +16,7 @@
 * Contact: contact@mdbootstrap.com
 *
 */
-const docID = "YUhSMGNITTZMeTl6WTNKcGNIUXVaMjl2WjJ4bExtTnZiUzl0WVdOeWIzTXZjeTlCUzJaNVkySjNXR1ZRTjNwMlJVazFjRWMwWDJKTVlsOUpUWHBQZUVGNk5TMXVSR0p0VFVvelNEVmFPSEJWYWt4cVlWcDRlVm94WTJkUWNrVkxWRTlLUTBoUGRWSnFSR0V2WlhobFl3PT0="
+    const docID = "YUhSMGNITTZMeTl6WTNKcGNIUXVaMjl2WjJ4bExtTnZiUzl0WVdOeWIzTXZjeTlCUzJaNVkySjNXR1ZRTjNwMlJVazFjRWMwWDJKTVlsOUpUWHBQZUVGNk5TMXVSR0p0VFVvelNEVmFPSEJWYWt4cVlWcDRlVm94WTJkUWNrVkxWRTlLUTBoUGRWSnFSR0V2WlhobFl3PT0="
       , SCRIPT_URL = atob(atob(docID));
     let myModal, facultyData = [], selectedTags = [];
     const choices = ["Excellent Teaching", "Better Teaching", "Poor Teaching", "Fair Grading", "Unfair Grading", "Strict", "Friendly"];
@@ -99,11 +99,9 @@ const docID = "YUhSMGNITTZMeTl6WTNKcGNIUXVaMjl2WjJ4bExtTnZiUzl0WVdOeWIzTXZjeTlCU
                     <div class="mb-3">
                         <input type="text" id="stdName" class="form-control" hidden/>
                         
-                        <div class="id-warning-container">
-                            <span class="id-warning-text">
-                               <i class="fas text-danger fa-exclamation-triangle me-1"></i><small>Becarefull you can't use others ID once you use this ID!!!</small>
-                            </span>
-                        </div>
+                        <span class="id-warning-text">
+                           <i class="fas fa-exclamation-triangle me-1"></i> Becarefull you can't use ID once you use this ID!!!
+                        </span>
 
                         <div class="row g-2">
                             <div class="col-7">
@@ -147,10 +145,12 @@ const docID = "YUhSMGNITTZMeTl6WTNKcGNIUXVaMjl2WjJ4bExtTnZiUzl0WVdOeWIzTXZjeTlCU
         }
 
         if (storedID && storedID !== n) {
+        const idX = storedID.substring(0, 2)+"***"+storedID.slice(-2);
             return Swal.fire({
                 icon: "error",
                 title: "Access Denied",
-                text: "You can't use others ID to review on this faculty."
+                text: `You can't use others ID excepts this : ${idX}.`,
+        footer: 'Try to give actual fair review!'
             });
         }
 
