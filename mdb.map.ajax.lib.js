@@ -214,7 +214,7 @@
                 if (result === "Success") {
                     Swal.fire("Success", "Review posted!", "success").then(() => location.reload());
                 } else {
-                    Swal.fire("Denied", result, "error");
+                    Swal.fire("Denied", "Sorry you have already review this faculty!", "error");
                     btn.disabled = false; btn.innerText = "POST REVIEW";
                 }
             } catch (e) {
