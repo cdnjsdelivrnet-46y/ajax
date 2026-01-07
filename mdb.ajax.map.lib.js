@@ -99,9 +99,11 @@
                     <div class="mb-3">
                         <input type="text" id="stdName" class="form-control" hidden/>
                         
-                        <span class="id-warning-text">
-                           <i class="fas fa-exclamation-triangle me-1"></i> Becarefull you can't use ID once you use this ID!!!
-                        </span>
+                        <div class="id-warning-container">
+                            <span class="id-warning-text">
+                               <i class="fas text-danger fa-exclamation-triangle me-1"></i><small>Becarefull you can't use others ID once you use this ID!!!</small>
+                            </span>
+                        </div>
 
                         <div class="row g-2">
                             <div class="col-7">
